@@ -624,7 +624,7 @@ copy_note(path: ARGV[0])</string>
 	<key>readme</key>
 	<string>## Usage
 
-Create new notes via the Add Note Keyword (default: `nadd`). Type a name and press &lt;kbd&gt;↩&lt;/kbd&gt; to open the file for editing. Use &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; to save a file with the clipboard contents.
+Create new notes via the `nadd` keyword. Type a name and press &lt;kbd&gt;↩&lt;/kbd&gt; to open the file for editing. Use &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; to save a file with the clipboard contents.
 
 ![Alfred search for nadd](images/about/nadd.png)
 
@@ -632,7 +632,7 @@ With the [Universal Action](https://www.alfredapp.com/help/features/universal-ac
 
 ![Universal Action for add note](images/about/ua.png)
 
-Search your notes with the View Notes Keyword (default: `nview`).
+Search your notes with the `nview` keyword.
 
 ![Alfred search for nview](images/about/nview.png)
 
@@ -872,8 +872,6 @@ Search your notes with the View Notes Keyword (default: `nview`).
 			<string>input_asterisk</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>2022.2</string>
 	<key>webaddress</key>
