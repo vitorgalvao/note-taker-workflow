@@ -7,7 +7,18 @@
 	<key>connections</key>
 	<dict>
 		<key>00EFFEBD-C714-4CAB-B92C-BDDBE67722E7</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>268AF531-D3CC-4EB8-BAA0-059955CBFF2F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>03643B46-4437-4668-B20D-2426B2945D5A</key>
 		<array>
 			<dict>
@@ -44,15 +55,13 @@
 				<false/>
 			</dict>
 		</array>
-		<key>35C8230F-B24B-433B-AD8A-97530A5C5B86</key>
-		<array/>
 		<key>39AEE376-1119-4C0E-BF24-CB23030EE283</key>
 		<array/>
 		<key>45EDDC71-B661-4406-B076-64091AE6AC94</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>35C8230F-B24B-433B-AD8A-97530A5C5B86</string>
+				<string>268AF531-D3CC-4EB8-BAA0-059955CBFF2F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -352,7 +361,7 @@ add_note(title: ARGV[0], content: ENV['action_text'] || Open3.capture2('pbpaste'
 				<string>require "#{Dir.pwd}/notetaker_functions.rb"
 
 New_note = add_note(title: ARGV[0], content: ENV['action_text'] || '')
-edit_note(path: New_note.to_path)</string>
+print New_note.to_path</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -391,6 +400,21 @@ edit_note(path: New_note.to_path)</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>268AF531-D3CC-4EB8-BAA0-059955CBFF2F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>*</string>
 				<key>passthroughargument</key>
@@ -404,31 +428,6 @@ edit_note(path: New_note.to_path)</string>
 			<string>AC7E8F41-5BE5-4C50-95FD-08B2631BE366</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>require "#{Dir.pwd}/notetaker_functions.rb"
-
-edit_note(path: ARGV[0])</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>2</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>35C8230F-B24B-433B-AD8A-97530A5C5B86</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -624,7 +623,7 @@ copy_note(path: ARGV[0])</string>
 	<key>readme</key>
 	<string>## Usage
 
-Create new notes via the `nadd` keyword. Type a name and press &lt;kbd&gt;↩&lt;/kbd&gt; to open the file for editing. Use &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; to save a file with the clipboard contents.
+Create new notes via the `nadd` keyword. Type a name and press &lt;kbd&gt;↩&lt;/kbd&gt; to open the file for editing. Use &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; or configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to save a file with the clipboard contents.
 
 ![Alfred search for nadd](images/about/nadd.png)
 
@@ -656,19 +655,23 @@ Search your notes with the `nview` keyword.
 			<key>ypos</key>
 			<real>350</real>
 		</dict>
+		<key>268AF531-D3CC-4EB8-BAA0-059955CBFF2F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Edit to set a custom application to open notes</string>
+			<key>xpos</key>
+			<real>1035</real>
+			<key>ypos</key>
+			<real>475</real>
+		</dict>
 		<key>3078BCDF-E3A8-45C7-9EB8-8EE49B29FC2E</key>
 		<dict>
 			<key>xpos</key>
 			<real>535</real>
 			<key>ypos</key>
 			<real>65</real>
-		</dict>
-		<key>35C8230F-B24B-433B-AD8A-97530A5C5B86</key>
-		<dict>
-			<key>xpos</key>
-			<real>860</real>
-			<key>ypos</key>
-			<real>475</real>
 		</dict>
 		<key>39AEE376-1119-4C0E-BF24-CB23030EE283</key>
 		<dict>

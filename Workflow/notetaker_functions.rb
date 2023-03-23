@@ -78,10 +78,6 @@ def copy_note(path:)
   Open3.capture2('pbcopy', stdin_data: Pathname.new(path).read)
 end
 
-def edit_note(path:)
-  system('open', '-t', path)
-end
-
 def trash(path:)
   system('osascript', '-l', 'JavaScript', '-e', 'function run(argv) { Application("Finder").delete(Path(argv[0])) }', path)
 end
