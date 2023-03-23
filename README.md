@@ -6,7 +6,7 @@ Keep small bits of text
 
 ## Usage
 
-Create new notes via the `nadd` keyword. Type a name and press <kbd>↩&#xFE0E;</kbd> to open the file for editing. Use <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd> to save a file with the clipboard contents.
+Create new notes via the `nadd` keyword. Type a name and press <kbd>↩&#xFE0E;</kbd> to open the file for editing. Use <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd> or configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to save a file with the clipboard contents.
 
 ![Alfred search for nadd](Workflow/images/about/nadd.png)
 
