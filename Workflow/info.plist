@@ -661,7 +661,7 @@ function run(argv) {
 				<key>scriptinput</key>
 				<integer>0</integer>
 				<key>stackview</key>
-				<false/>
+				<true/>
 				<key>windowheight</key>
 				<integer>0</integer>
 			</dict>
@@ -737,7 +737,7 @@ function run(argv) {
 				<key>scopes</key>
 				<array/>
 				<key>sortmode</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -1114,7 +1114,7 @@ Find your notes with the `nview` keyword.
 
 ## Edit
 
-Notes can be edited directly in Alfred or a text editor. The default can be changed in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+Notes can be edited directly in Alfred or a text editor. The default can be changed in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). In Alfred the view is stacked, meaning &lt;kbd&gt;⎋&lt;/kbd&gt; goes back to the search. &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⎋&lt;/kbd&gt; force hides.
 
 ![Editing note](images/about/edit.png)
 
@@ -1394,25 +1394,6 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<true/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
-				<string>Open for editing in Alfred</string>
-			</dict>
-			<key>description</key>
-			<string></string>
-			<key>label</key>
-			<string>Viewer</string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>edit_in_alfred</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
 				<string>md</string>
 				<key>pairs</key>
 				<array>
@@ -1435,9 +1416,26 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>variable</key>
 			<string>new_file_extension</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Open for editing in Alfred</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Viewer</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>edit_in_alfred</string>
+		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>2023.2</string>
 	<key>webaddress</key>
