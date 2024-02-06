@@ -34,19 +34,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>371C847A-2395-478C-BDA3-A118183B9D2C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A5BBBDFA-812C-4890-A9FB-7A4C7412959F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>39007B1B-7A95-4D71-8167-54D693358BB8</key>
 		<array>
 			<dict>
@@ -133,7 +120,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>55208E85-B267-4F6E-81B9-9C3CF2D9E0F5</string>
+				<string>69E2339E-FD01-4F41-91B5-99F8BA6C439F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -145,7 +132,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>371C847A-2395-478C-BDA3-A118183B9D2C</string>
+				<string>A5BBBDFA-812C-4890-A9FB-7A4C7412959F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -158,19 +145,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>BBDDB0D6-6A05-4706-8428-55AE093FA9E4</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>55208E85-B267-4F6E-81B9-9C3CF2D9E0F5</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>69E2339E-FD01-4F41-91B5-99F8BA6C439F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -234,7 +208,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>371C847A-2395-478C-BDA3-A118183B9D2C</string>
+				<string>A5BBBDFA-812C-4890-A9FB-7A4C7412959F</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
@@ -417,24 +391,9 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>-----R- Note Taker</string>
+	<string>Note Taker</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>tasksettings</key>
-				<dict/>
-				<key>taskuid</key>
-				<string>com.alfredapp.automation.core/files-and-folders/file.read</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.automation.task</string>
-			<key>uid</key>
-			<string>55208E85-B267-4F6E-81B9-9C3CF2D9E0F5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -443,9 +402,9 @@
 				<key>footertext</key>
 				<string>⌘↩: Edit in Alfred · ⌃↩: Open in text editor</string>
 				<key>inputfile</key>
-				<string></string>
+				<string>{var:note_path}</string>
 				<key>inputtype</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>loadingtext</key>
 				<string></string>
 				<key>outputmode</key>
@@ -651,9 +610,9 @@ function run(argv) {
 				<key>footertext</key>
 				<string>⌘↩: Save and close · ⌃↩: Save and open in text editor</string>
 				<key>inputfile</key>
-				<string></string>
+				<string>{var:note_path}</string>
 				<key>inputtype</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>loadingtext</key>
 				<string></string>
 				<key>outputmode</key>
@@ -669,24 +628,6 @@ function run(argv) {
 			<string>alfred.workflow.userinterface.text</string>
 			<key>uid</key>
 			<string>A5BBBDFA-812C-4890-A9FB-7A4C7412959F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>tasksettings</key>
-				<dict>
-					<key>target_path</key>
-					<string>{var:note_path}</string>
-				</dict>
-				<key>taskuid</key>
-				<string>com.alfredapp.automation.core/files-and-folders/file.read</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.automation.task</string>
-			<key>uid</key>
-			<string>371C847A-2395-478C-BDA3-A118183B9D2C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1134,7 +1075,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>0A1EA1F4-AAFA-4ABD-A6F1-CE1B87C9F961</key>
 		<dict>
 			<key>xpos</key>
-			<real>2080</real>
+			<real>1570</real>
 			<key>ypos</key>
 			<real>290</real>
 		</dict>
@@ -1159,16 +1100,9 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>note</key>
 			<string>Edit to set a custom application to open notes</string>
 			<key>xpos</key>
-			<real>2560</real>
+			<real>2050</real>
 			<key>ypos</key>
 			<real>330</real>
-		</dict>
-		<key>371C847A-2395-478C-BDA3-A118183B9D2C</key>
-		<dict>
-			<key>xpos</key>
-			<real>1535</real>
-			<key>ypos</key>
-			<real>185</real>
 		</dict>
 		<key>39007B1B-7A95-4D71-8167-54D693358BB8</key>
 		<dict>
@@ -1180,7 +1114,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>3CFC06C4-15FD-458F-8931-B1E802885DC8</key>
 		<dict>
 			<key>xpos</key>
-			<real>2160</real>
+			<real>1650</real>
 			<key>ypos</key>
 			<real>185</real>
 		</dict>
@@ -1205,24 +1139,17 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>ypos</key>
 			<real>190</real>
 		</dict>
-		<key>55208E85-B267-4F6E-81B9-9C3CF2D9E0F5</key>
-		<dict>
-			<key>xpos</key>
-			<real>1195</real>
-			<key>ypos</key>
-			<real>40</real>
-		</dict>
 		<key>5B01A01B-A7DE-4D47-9336-B7CA9E99C023</key>
 		<dict>
 			<key>xpos</key>
-			<real>2330</real>
+			<real>1820</real>
 			<key>ypos</key>
 			<real>215</real>
 		</dict>
 		<key>5E8ED3D2-1843-4703-8D38-06A64073881B</key>
 		<dict>
 			<key>xpos</key>
-			<real>2415</real>
+			<real>1905</real>
 			<key>ypos</key>
 			<real>215</real>
 		</dict>
@@ -1236,7 +1163,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>69E2339E-FD01-4F41-91B5-99F8BA6C439F</key>
 		<dict>
 			<key>xpos</key>
-			<real>1370</real>
+			<real>1195</real>
 			<key>ypos</key>
 			<real>40</real>
 		</dict>
@@ -1264,7 +1191,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>A5BBBDFA-812C-4890-A9FB-7A4C7412959F</key>
 		<dict>
 			<key>xpos</key>
-			<real>1920</real>
+			<real>1410</real>
 			<key>ypos</key>
 			<real>185</real>
 		</dict>
@@ -1306,7 +1233,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>E9284C9B-2763-4D7F-A733-37D92B2DCECB</key>
 		<dict>
 			<key>xpos</key>
-			<real>2415</real>
+			<real>1905</real>
 			<key>ypos</key>
 			<real>70</real>
 		</dict>
@@ -1436,6 +1363,8 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<string>edit_in_alfred</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>2023.2</string>
 	<key>webaddress</key>
