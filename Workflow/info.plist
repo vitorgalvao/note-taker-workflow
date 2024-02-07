@@ -400,7 +400,7 @@
 				<key>behaviour</key>
 				<integer>2</integer>
 				<key>footertext</key>
-				<string>⌘↩: Edit in Alfred · ⌃↩: Open in text editor</string>
+				<string>⌘↩ Edit in Alfred · ⌥↩ Open in text editor</string>
 				<key>inputfile</key>
 				<string>{var:note_path}</string>
 				<key>inputtype</key>
@@ -608,7 +608,7 @@ function run(argv) {
 				<key>behaviour</key>
 				<integer>1</integer>
 				<key>footertext</key>
-				<string>⌘↩: Save and close · ⌃↩: Save and open in text editor</string>
+				<string>⌘↩ Save and close · ⌥↩ Save and open in text editor</string>
 				<key>inputfile</key>
 				<string>{var:note_path}</string>
 				<key>inputtype</key>
@@ -705,7 +705,7 @@ function run(argv) {
 				<key>keyword</key>
 				<string>{var:view_notes_keyword}</string>
 				<key>subtext</key>
-				<string>↩: Edit · ⌘↩: Preview · ⌥↩: Copy · ⌃↩: Copy and delete · ⇧: Quick Look</string>
+				<string>↩ Edit · ⌘↩ Preview · ⌥↩ Copy · ⌃↩ Copy and delete · ⇧ Quick Look</string>
 				<key>text</key>
 				<string>View Notes</string>
 				<key>withspace</key>
@@ -1047,11 +1047,11 @@ Find your notes with the `nview` keyword.
 
 ![Alfred search for nview](images/about/nview.png)
 
-* &lt;kbd&gt;↩&lt;/kbd&gt;: Edit note.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Preview note in Alfred, parsing markdown.
-* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Copy note contents.
-* &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Copy note contents and delete it.
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;): Quick Look note.
+* &lt;kbd&gt;↩&lt;/kbd&gt; Edit note.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Preview note in Alfred, parsing markdown.
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Copy note contents.
+* &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Copy note contents and delete it.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;Y&lt;/kbd&gt; (or tap &lt;kbd&gt;⇧&lt;/kbd&gt;) Quick Look note.
 
 ## Edit
 
@@ -1059,8 +1059,8 @@ Notes can be edited directly in Alfred or a text editor. The default can be chan
 
 ![Editing note](images/about/edit.png)
 
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Save note.
-* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Save and open in text editor.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Save note.
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Save and open in text editor.
 
 ### Preview
 
@@ -1068,8 +1068,8 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 
 ![Previewing note](images/about/preview.png)
 
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Edit note in Alfred.
-* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Open in text editor.</string>
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Edit note in Alfred.
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open in text editor.</string>
 	<key>uidata</key>
 	<dict>
 		<key>0A1EA1F4-AAFA-4ABD-A6F1-CE1B87C9F961</key>
@@ -1363,8 +1363,6 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<string>edit_in_alfred</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>2023.2</string>
 	<key>webaddress</key>
