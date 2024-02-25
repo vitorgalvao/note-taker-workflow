@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>333830F7-22A8-49D1-9288-2AF6CEF19CBF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8F9BEC2F-8B76-4495-ADFB-310A17A94764</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>39007B1B-7A95-4D71-8167-54D693358BB8</key>
 		<array>
 			<dict>
@@ -217,6 +230,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>6EE6822B-BEF6-4448-AC29-1AF65040217F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B4F04599-BBE1-4B02-8336-0E88ECA304A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
 		<key>6F02DF87-5036-47FA-B960-C57F64C120DD</key>
 		<array>
 			<dict>
@@ -277,6 +303,29 @@
 				<string>Save and open in text editor</string>
 				<key>vitoclose</key>
 				<false/>
+			</dict>
+		</array>
+		<key>B4F04599-BBE1-4B02-8336-0E88ECA304A9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FEC3EEA9-5B06-4A4A-99CB-12577C0176B6</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy text</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3539C1EE-8AB7-4C87-A183-21F45AC60C39</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Create new note</string>
+				<key>vitoclose</key>
+				<true/>
 			</dict>
 		</array>
 		<key>BB2CD150-2E0C-44B4-AD25-3E38E4BF793B</key>
@@ -399,6 +448,8 @@
 			<dict>
 				<key>behaviour</key>
 				<integer>2</integer>
+				<key>fontmode</key>
+				<integer>0</integer>
 				<key>footertext</key>
 				<string>⌘↩ Edit in Alfred · ⌥↩ Open in text editor</string>
 				<key>inputfile</key>
@@ -413,8 +464,6 @@
 				<integer>0</integer>
 				<key>stackview</key>
 				<true/>
-				<key>windowheight</key>
-				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.userinterface.text</string>
@@ -435,7 +484,7 @@
 				<key>filename</key>
 				<string>{query}</string>
 				<key>filetext</key>
-				<string></string>
+				<string>{var:action_text}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>relativepathmode</key>
@@ -607,6 +656,8 @@ function run(argv) {
 			<dict>
 				<key>behaviour</key>
 				<integer>1</integer>
+				<key>fontmode</key>
+				<integer>0</integer>
 				<key>footertext</key>
 				<string>⌘↩ Save and close · ⌥↩ Save and open in text editor</string>
 				<key>inputfile</key>
@@ -621,8 +672,6 @@ function run(argv) {
 				<integer>0</integer>
 				<key>stackview</key>
 				<true/>
-				<key>windowheight</key>
-				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.userinterface.text</string>
@@ -715,6 +764,21 @@ function run(argv) {
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>D12C7141-4A07-4223-8D0F-AE5AEF64ABC3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>new_from_action</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>333830F7-22A8-49D1-9288-2AF6CEF19CBF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -998,6 +1062,75 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>Edit text</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>6EE6822B-BEF6-4448-AC29-1AF65040217F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>behaviour</key>
+				<integer>1</integer>
+				<key>fontmode</key>
+				<integer>0</integer>
+				<key>footertext</key>
+				<string>⌘↩ Copy · ⌥↩ Create new note</string>
+				<key>inputfile</key>
+				<string></string>
+				<key>inputtype</key>
+				<integer>0</integer>
+				<key>loadingtext</key>
+				<string></string>
+				<key>outputmode</key>
+				<integer>0</integer>
+				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>stackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.userinterface.text</string>
+			<key>uid</key>
+			<string>B4F04599-BBE1-4B02-8336-0E88ECA304A9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>FEC3EEA9-5B06-4A4A-99CB-12577C0176B6</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -1027,6 +1160,25 @@ function run(argv) {
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>new_from_action</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>3539C1EE-8AB7-4C87-A183-21F45AC60C39</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>## Usage
@@ -1037,9 +1189,11 @@ Make new notes via the `nadd` keyword. Type a name and press &lt;kbd&gt;↩&lt;/
 
 ![Alfred search for nadd](images/about/nadd.png)
 
-With the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/), start the note with selected text or an item from [Clipboard History](https://www.alfredapp.com/help/features/clipboard/).
+With the [Universal Actions](https://www.alfredapp.com/help/features/universal-actions/), create a new note or edit text to copy again from select text or an item from [Clipboard History](https://www.alfredapp.com/help/features/clipboard/).
 
-![Universal Action for add note](images/about/ua.png)
+![Universal Action for add note](images/about/uaadd.png)
+
+![Universal Action for edit text](images/about/uaedit.png)
 
 ### Search
 
@@ -1104,6 +1258,20 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>ypos</key>
 			<real>330</real>
 		</dict>
+		<key>333830F7-22A8-49D1-9288-2AF6CEF19CBF</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>185</real>
+		</dict>
+		<key>3539C1EE-8AB7-4C87-A183-21F45AC60C39</key>
+		<dict>
+			<key>xpos</key>
+			<real>435</real>
+			<key>ypos</key>
+			<real>630</real>
+		</dict>
 		<key>39007B1B-7A95-4D71-8167-54D693358BB8</key>
 		<dict>
 			<key>xpos</key>
@@ -1167,6 +1335,13 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>ypos</key>
 			<real>40</real>
 		</dict>
+		<key>6EE6822B-BEF6-4448-AC29-1AF65040217F</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>485</real>
+		</dict>
 		<key>6F02DF87-5036-47FA-B960-C57F64C120DD</key>
 		<dict>
 			<key>xpos</key>
@@ -1194,6 +1369,13 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<real>1410</real>
 			<key>ypos</key>
 			<real>185</real>
+		</dict>
+		<key>B4F04599-BBE1-4B02-8336-0E88ECA304A9</key>
+		<dict>
+			<key>xpos</key>
+			<real>225</real>
+			<key>ypos</key>
+			<real>490</real>
 		</dict>
 		<key>BB2CD150-2E0C-44B4-AD25-3E38E4BF793B</key>
 		<dict>
@@ -1250,6 +1432,13 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<real>305</real>
 			<key>ypos</key>
 			<real>40</real>
+		</dict>
+		<key>FEC3EEA9-5B06-4A4A-99CB-12577C0176B6</key>
+		<dict>
+			<key>xpos</key>
+			<real>435</real>
+			<key>ypos</key>
+			<real>490</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
