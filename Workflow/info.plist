@@ -450,6 +450,8 @@
 				<integer>2</integer>
 				<key>fontmode</key>
 				<integer>0</integer>
+				<key>fontsizing</key>
+				<integer>0</integer>
 				<key>footertext</key>
 				<string>⌘↩ Edit in Alfred · ⌥↩ Open in text editor</string>
 				<key>inputfile</key>
@@ -461,6 +463,8 @@
 				<key>outputmode</key>
 				<integer>0</integer>
 				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>spellchecking</key>
 				<integer>0</integer>
 				<key>stackview</key>
 				<true/>
@@ -658,6 +662,8 @@ function run(argv) {
 				<integer>1</integer>
 				<key>fontmode</key>
 				<integer>0</integer>
+				<key>fontsizing</key>
+				<integer>0</integer>
 				<key>footertext</key>
 				<string>⌘↩ Save and close · ⌥↩ Save and open in text editor</string>
 				<key>inputfile</key>
@@ -669,6 +675,8 @@ function run(argv) {
 				<key>outputmode</key>
 				<integer>0</integer>
 				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>spellchecking</key>
 				<integer>0</integer>
 				<key>stackview</key>
 				<true/>
@@ -1069,7 +1077,7 @@ function run(argv) {
 				<key>acceptstext</key>
 				<true/>
 				<key>acceptsurls</key>
-				<false/>
+				<true/>
 				<key>name</key>
 				<string>Edit text</string>
 			</dict>
@@ -1087,6 +1095,8 @@ function run(argv) {
 				<integer>1</integer>
 				<key>fontmode</key>
 				<integer>0</integer>
+				<key>fontsizing</key>
+				<integer>0</integer>
 				<key>footertext</key>
 				<string>⌘↩ Copy · ⌥↩ Create new note</string>
 				<key>inputfile</key>
@@ -1098,6 +1108,8 @@ function run(argv) {
 				<key>outputmode</key>
 				<integer>0</integer>
 				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>spellchecking</key>
 				<integer>0</integer>
 				<key>stackview</key>
 				<false/>
