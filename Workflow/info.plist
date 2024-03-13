@@ -269,6 +269,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>798D2B3F-CA9B-4351-AF4B-5B13672FAE9C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8D3BABE5-6CDE-4E77-A161-CD8F3EBD3021</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>8D3BABE5-6CDE-4E77-A161-CD8F3EBD3021</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>39007B1B-7A95-4D71-8167-54D693358BB8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>8F9BEC2F-8B76-4495-ADFB-310A17A94764</key>
 		<array>
 			<dict>
@@ -443,6 +469,33 @@
 	<string>Note Taker</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array>
+					<string>+public.plain-text</string>
+				</array>
+				<key>name</key>
+				<string>Edit File</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>798D2B3F-CA9B-4351-AF4B-5B13672FAE9C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>8D3BABE5-6CDE-4E77-A161-CD8F3EBD3021</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -1070,27 +1123,6 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsfiles</key>
-				<false/>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>acceptstext</key>
-				<true/>
-				<key>acceptsurls</key>
-				<true/>
-				<key>name</key>
-				<string>Edit text</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.universalaction</string>
-			<key>uid</key>
-			<string>6EE6822B-BEF6-4448-AC29-1AF65040217F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>behaviour</key>
 				<integer>1</integer>
 				<key>fontmode</key>
@@ -1118,6 +1150,27 @@ function run(argv) {
 			<string>alfred.workflow.userinterface.text</string>
 			<key>uid</key>
 			<string>B4F04599-BBE1-4B02-8336-0E88ECA304A9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<true/>
+				<key>name</key>
+				<string>Edit text</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>6EE6822B-BEF6-4448-AC29-1AF65040217F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1201,11 +1254,9 @@ Make new notes via the `nadd` keyword. Type a name and press &lt;kbd&gt;↩&lt;/
 
 ![Alfred search for nadd](images/about/nadd.png)
 
-With the [Universal Actions](https://www.alfredapp.com/help/features/universal-actions/), create a new note or edit text to copy again from select text or an item from [Clipboard History](https://www.alfredapp.com/help/features/clipboard/).
+Alternatively, create a new note from a selection or [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) with the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/).
 
-![Universal Action for add note](images/about/uaadd.png)
-
-![Universal Action for edit text](images/about/uaedit.png)
+![Universal Action to add note](images/about/uaadd.png)
 
 ### Search
 
@@ -1221,12 +1272,18 @@ Find your notes with the `nview` keyword.
 
 ## Edit
 
-Notes can be edited directly in Alfred or a text editor. The default can be changed in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). In Alfred the view is stacked, meaning &lt;kbd&gt;⎋&lt;/kbd&gt; goes back to the search. &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⎋&lt;/kbd&gt; force hides.
+Notes can be edited directly in Alfred or a text editor. The default can be changed in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). Alfred’s view is stacked, meaning &lt;kbd&gt;⎋&lt;/kbd&gt; goes back to the search. &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⎋&lt;/kbd&gt; force hides.
 
 ![Editing note](images/about/edit.png)
 
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Save note.
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Save and open in text editor.
+
+With the Universal Actions, edit text from a file, a selection, or [Clipboard History](https://www.alfredapp.com/help/features/clipboard/).
+
+![Universal Action to edit text](images/about/uaedittext.png)
+
+![Universal Action to edit file](images/about/uaeditfile.png)
 
 ### Preview
 
@@ -1243,21 +1300,21 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>xpos</key>
 			<real>1570</real>
 			<key>ypos</key>
-			<real>290</real>
+			<real>440</real>
 		</dict>
 		<key>109127CB-1ECA-47B9-B89B-F8E5A698BA9F</key>
 		<dict>
 			<key>xpos</key>
 			<real>1235</real>
 			<key>ypos</key>
-			<real>510</real>
+			<real>660</real>
 		</dict>
 		<key>1F5437E9-0DF7-46A4-AA92-81D6427F076B</key>
 		<dict>
 			<key>xpos</key>
 			<real>1315</real>
 			<key>ypos</key>
-			<real>480</real>
+			<real>630</real>
 		</dict>
 		<key>268AF531-D3CC-4EB8-BAA0-059955CBFF2F</key>
 		<dict>
@@ -1268,189 +1325,203 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>xpos</key>
 			<real>2050</real>
 			<key>ypos</key>
-			<real>330</real>
+			<real>480</real>
 		</dict>
 		<key>333830F7-22A8-49D1-9288-2AF6CEF19CBF</key>
 		<dict>
 			<key>xpos</key>
 			<real>50</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>335</real>
 		</dict>
 		<key>3539C1EE-8AB7-4C87-A183-21F45AC60C39</key>
 		<dict>
 			<key>xpos</key>
 			<real>435</real>
 			<key>ypos</key>
-			<real>630</real>
+			<real>780</real>
 		</dict>
 		<key>39007B1B-7A95-4D71-8167-54D693358BB8</key>
 		<dict>
 			<key>xpos</key>
 			<real>940</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>365</real>
 		</dict>
 		<key>3CFC06C4-15FD-458F-8931-B1E802885DC8</key>
 		<dict>
 			<key>xpos</key>
 			<real>1650</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>335</real>
 		</dict>
 		<key>4268F5BF-DEAF-4330-9243-96D731A79649</key>
 		<dict>
 			<key>xpos</key>
 			<real>580</real>
 			<key>ypos</key>
-			<real>40</real>
+			<real>190</real>
 		</dict>
 		<key>45EDDC71-B661-4406-B076-64091AE6AC94</key>
 		<dict>
 			<key>xpos</key>
 			<real>575</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>335</real>
 		</dict>
 		<key>4B7DB4CB-8E78-42E2-BD31-AE422AD38416</key>
 		<dict>
 			<key>xpos</key>
 			<real>1045</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>340</real>
 		</dict>
 		<key>5B01A01B-A7DE-4D47-9336-B7CA9E99C023</key>
 		<dict>
 			<key>xpos</key>
 			<real>1820</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>365</real>
 		</dict>
 		<key>5E8ED3D2-1843-4703-8D38-06A64073881B</key>
 		<dict>
 			<key>xpos</key>
 			<real>1905</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>365</real>
 		</dict>
 		<key>6307D69B-2A58-4CC8-A224-EECFB208F0B8</key>
 		<dict>
 			<key>xpos</key>
 			<real>810</real>
 			<key>ypos</key>
-			<real>340</real>
+			<real>490</real>
 		</dict>
 		<key>69E2339E-FD01-4F41-91B5-99F8BA6C439F</key>
 		<dict>
 			<key>xpos</key>
 			<real>1195</real>
 			<key>ypos</key>
-			<real>40</real>
+			<real>190</real>
 		</dict>
 		<key>6EE6822B-BEF6-4448-AC29-1AF65040217F</key>
 		<dict>
 			<key>xpos</key>
 			<real>50</real>
 			<key>ypos</key>
-			<real>485</real>
+			<real>640</real>
 		</dict>
 		<key>6F02DF87-5036-47FA-B960-C57F64C120DD</key>
 		<dict>
 			<key>xpos</key>
 			<real>860</real>
 			<key>ypos</key>
-			<real>290</real>
+			<real>440</real>
 		</dict>
 		<key>759121D9-E2D9-429D-A361-034E5C467193</key>
 		<dict>
 			<key>xpos</key>
 			<real>760</real>
 			<key>ypos</key>
-			<real>390</real>
+			<real>540</real>
 		</dict>
-		<key>8F9BEC2F-8B76-4495-ADFB-310A17A94764</key>
-		<dict>
-			<key>xpos</key>
-			<real>225</real>
-			<key>ypos</key>
-			<real>70</real>
-		</dict>
-		<key>A5BBBDFA-812C-4890-A9FB-7A4C7412959F</key>
-		<dict>
-			<key>xpos</key>
-			<real>1410</real>
-			<key>ypos</key>
-			<real>185</real>
-		</dict>
-		<key>B4F04599-BBE1-4B02-8336-0E88ECA304A9</key>
-		<dict>
-			<key>xpos</key>
-			<real>225</real>
-			<key>ypos</key>
-			<real>490</real>
-		</dict>
-		<key>BB2CD150-2E0C-44B4-AD25-3E38E4BF793B</key>
-		<dict>
-			<key>xpos</key>
-			<real>1080</real>
-			<key>ypos</key>
-			<real>480</real>
-		</dict>
-		<key>BBDDB0D6-6A05-4706-8428-55AE093FA9E4</key>
-		<dict>
-			<key>xpos</key>
-			<real>1235</real>
-			<key>ypos</key>
-			<real>360</real>
-		</dict>
-		<key>CD443C0A-C593-4AB8-B60F-BA7E78AE5C27</key>
-		<dict>
-			<key>xpos</key>
-			<real>485</real>
-			<key>ypos</key>
-			<real>215</real>
-		</dict>
-		<key>D004042C-58C6-4A14-9D27-EFE19796B8AF</key>
+		<key>798D2B3F-CA9B-4351-AF4B-5B13672FAE9C</key>
 		<dict>
 			<key>xpos</key>
 			<real>50</real>
 			<key>ypos</key>
 			<real>40</real>
 		</dict>
+		<key>8D3BABE5-6CDE-4E77-A161-CD8F3EBD3021</key>
+		<dict>
+			<key>xpos</key>
+			<real>620</real>
+			<key>ypos</key>
+			<real>70</real>
+		</dict>
+		<key>8F9BEC2F-8B76-4495-ADFB-310A17A94764</key>
+		<dict>
+			<key>xpos</key>
+			<real>225</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>A5BBBDFA-812C-4890-A9FB-7A4C7412959F</key>
+		<dict>
+			<key>xpos</key>
+			<real>1410</real>
+			<key>ypos</key>
+			<real>335</real>
+		</dict>
+		<key>B4F04599-BBE1-4B02-8336-0E88ECA304A9</key>
+		<dict>
+			<key>xpos</key>
+			<real>225</real>
+			<key>ypos</key>
+			<real>640</real>
+		</dict>
+		<key>BB2CD150-2E0C-44B4-AD25-3E38E4BF793B</key>
+		<dict>
+			<key>xpos</key>
+			<real>1080</real>
+			<key>ypos</key>
+			<real>630</real>
+		</dict>
+		<key>BBDDB0D6-6A05-4706-8428-55AE093FA9E4</key>
+		<dict>
+			<key>xpos</key>
+			<real>1235</real>
+			<key>ypos</key>
+			<real>510</real>
+		</dict>
+		<key>CD443C0A-C593-4AB8-B60F-BA7E78AE5C27</key>
+		<dict>
+			<key>xpos</key>
+			<real>485</real>
+			<key>ypos</key>
+			<real>365</real>
+		</dict>
+		<key>D004042C-58C6-4A14-9D27-EFE19796B8AF</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
 		<key>D12C7141-4A07-4223-8D0F-AE5AEF64ABC3</key>
 		<dict>
 			<key>xpos</key>
 			<real>305</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>335</real>
 		</dict>
 		<key>E9284C9B-2763-4D7F-A733-37D92B2DCECB</key>
 		<dict>
 			<key>xpos</key>
 			<real>1905</real>
 			<key>ypos</key>
-			<real>70</real>
+			<real>220</real>
 		</dict>
 		<key>EDBCA616-E301-4D4A-9B81-6A94998D0A93</key>
 		<dict>
 			<key>xpos</key>
 			<real>925</real>
 			<key>ypos</key>
-			<real>480</real>
+			<real>630</real>
 		</dict>
 		<key>FDE07E00-698E-453D-8202-90A71C69A996</key>
 		<dict>
 			<key>xpos</key>
 			<real>305</real>
 			<key>ypos</key>
-			<real>40</real>
+			<real>190</real>
 		</dict>
 		<key>FEC3EEA9-5B06-4A4A-99CB-12577C0176B6</key>
 		<dict>
 			<key>xpos</key>
 			<real>435</real>
 			<key>ypos</key>
-			<real>490</real>
+			<real>640</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
