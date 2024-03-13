@@ -12,11 +12,9 @@ Make new notes via the `nadd` keyword. Type a name and press <kbd>↩&#xFE0E;</k
 
 ![Alfred search for nadd](Workflow/images/about/nadd.png)
 
-With the [Universal Actions](https://www.alfredapp.com/help/features/universal-actions/), create a new note or edit text to copy again from select text or an item from [Clipboard History](https://www.alfredapp.com/help/features/clipboard/).
+Alternatively, create a new note from a selection or [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) with the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/).
 
-![Universal Action for add note](Workflow/images/about/uaadd.png)
-
-![Universal Action for edit text](Workflow/images/about/uaedit.png)
+![Universal Action to add note](Workflow/images/about/uaadd.png)
 
 ### Search
 
@@ -32,12 +30,18 @@ Find your notes with the `nview` keyword.
 
 ## Edit
 
-Notes can be edited directly in Alfred or a text editor. The default can be changed in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). In Alfred the view is stacked, meaning <kbd>⎋</kbd> goes back to the search. <kbd>⌘</kbd><kbd>⎋</kbd> force hides.
+Notes can be edited directly in Alfred or a text editor. The default can be changed in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). Alfred’s view is stacked, meaning <kbd>⎋</kbd> goes back to the search. <kbd>⌘</kbd><kbd>⎋</kbd> force hides.
 
 ![Editing note](Workflow/images/about/edit.png)
 
 * <kbd>⌘</kbd><kbd>↩&#xFE0E;</kbd> Save note.
 * <kbd>⌥</kbd><kbd>↩&#xFE0E;</kbd> Save and open in text editor.
+
+With the Universal Actions, edit text from a file, a selection, or [Clipboard History](https://www.alfredapp.com/help/features/clipboard/).
+
+![Universal Action to edit text](Workflow/images/about/uaedittext.png)
+
+![Universal Action to edit file](Workflow/images/about/uaeditfile.png)
 
 ### Preview
 
