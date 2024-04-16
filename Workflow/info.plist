@@ -790,9 +790,9 @@ function run(argv) {
 				<key>sortmode</key>
 				<integer>0</integer>
 				<key>subtext</key>
-				<string></string>
+				<string>Use * to list all</string>
 				<key>title</key>
-				<string></string>
+				<string>Search Notes</string>
 				<key>types</key>
 				<array>
 					<string>+public.plain-text</string>
