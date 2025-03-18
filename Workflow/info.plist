@@ -354,6 +354,19 @@
 				<true/>
 			</dict>
 		</array>
+		<key>B9401232-A7CF-42BD-AC1E-5A9FEE54DD5C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>45EDDC71-B661-4406-B076-64091AE6AC94</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>BB2CD150-2E0C-44B4-AD25-3E38E4BF793B</key>
 		<array>
 			<dict>
@@ -380,19 +393,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>CD443C0A-C593-4AB8-B60F-BA7E78AE5C27</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>45EDDC71-B661-4406-B076-64091AE6AC94</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>D004042C-58C6-4A14-9D27-EFE19796B8AF</key>
 		<array>
 			<dict>
@@ -410,7 +410,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>CD443C0A-C593-4AB8-B60F-BA7E78AE5C27</string>
+				<string>B9401232-A7CF-42BD-AC1E-5A9FEE54DD5C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -810,6 +810,43 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>// Helpers
+function envVar(varName) {
+  return $.NSProcessInfo
+    .processInfo
+    .environment
+    .objectForKey(varName).js
+}
+
+// Main
+const initQuery = envVar("search_with_asterisk") === "1" ? "*" : ""
+
+JSON.stringify({ alfredworkflow: {
+  config: { scopes: [envVar("notes_dir")] },
+  arg: initQuery
+}})</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B9401232-A7CF-42BD-AC1E-5A9FEE54DD5C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -903,23 +940,6 @@ function run(argv) {
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>5E8ED3D2-1843-4703-8D38-06A64073881B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>json</key>
-				<string>{
-  "alfredworkflow" : {
-    "config" : { "scopes" : [ "{var:notes_dir}" ] }
-  }
-}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.json</string>
-			<key>uid</key>
-			<string>CD443C0A-C593-4AB8-B60F-BA7E78AE5C27</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1086,24 +1106,6 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>tasksettings</key>
-				<dict>
-					<key>target_path</key>
-					<string>{var:note_path}</string>
-				</dict>
-				<key>taskuid</key>
-				<string>com.alfredapp.automation.core/files-and-folders/path.trash</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.automation.task</string>
-			<key>uid</key>
-			<string>1F5437E9-0DF7-46A4-AA92-81D6427F076B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -1119,6 +1121,24 @@ function run(argv) {
 			<string>BB2CD150-2E0C-44B4-AD25-3E38E4BF793B</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>tasksettings</key>
+				<dict>
+					<key>target_path</key>
+					<string>{var:note_path}</string>
+				</dict>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/files-and-folders/path.trash</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>1F5437E9-0DF7-46A4-AA92-81D6427F076B</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1298,21 +1318,21 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>0A1EA1F4-AAFA-4ABD-A6F1-CE1B87C9F961</key>
 		<dict>
 			<key>xpos</key>
-			<real>1570</real>
+			<real>1635</real>
 			<key>ypos</key>
 			<real>440</real>
 		</dict>
 		<key>109127CB-1ECA-47B9-B89B-F8E5A698BA9F</key>
 		<dict>
 			<key>xpos</key>
-			<real>1235</real>
+			<real>1300</real>
 			<key>ypos</key>
 			<real>660</real>
 		</dict>
 		<key>1F5437E9-0DF7-46A4-AA92-81D6427F076B</key>
 		<dict>
 			<key>xpos</key>
-			<real>1315</real>
+			<real>1380</real>
 			<key>ypos</key>
 			<real>630</real>
 		</dict>
@@ -1323,7 +1343,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>note</key>
 			<string>Edit to set a custom application to open notes</string>
 			<key>xpos</key>
-			<real>2050</real>
+			<real>2115</real>
 			<key>ypos</key>
 			<real>480</real>
 		</dict>
@@ -1344,63 +1364,63 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>39007B1B-7A95-4D71-8167-54D693358BB8</key>
 		<dict>
 			<key>xpos</key>
-			<real>940</real>
+			<real>1005</real>
 			<key>ypos</key>
 			<real>365</real>
 		</dict>
 		<key>3CFC06C4-15FD-458F-8931-B1E802885DC8</key>
 		<dict>
 			<key>xpos</key>
-			<real>1650</real>
+			<real>1715</real>
 			<key>ypos</key>
 			<real>335</real>
 		</dict>
 		<key>4268F5BF-DEAF-4330-9243-96D731A79649</key>
 		<dict>
 			<key>xpos</key>
-			<real>580</real>
+			<real>645</real>
 			<key>ypos</key>
 			<real>190</real>
 		</dict>
 		<key>45EDDC71-B661-4406-B076-64091AE6AC94</key>
 		<dict>
 			<key>xpos</key>
-			<real>575</real>
+			<real>640</real>
 			<key>ypos</key>
 			<real>335</real>
 		</dict>
 		<key>4B7DB4CB-8E78-42E2-BD31-AE422AD38416</key>
 		<dict>
 			<key>xpos</key>
-			<real>1045</real>
+			<real>1110</real>
 			<key>ypos</key>
 			<real>340</real>
 		</dict>
 		<key>5B01A01B-A7DE-4D47-9336-B7CA9E99C023</key>
 		<dict>
 			<key>xpos</key>
-			<real>1820</real>
+			<real>1885</real>
 			<key>ypos</key>
 			<real>365</real>
 		</dict>
 		<key>5E8ED3D2-1843-4703-8D38-06A64073881B</key>
 		<dict>
 			<key>xpos</key>
-			<real>1905</real>
+			<real>1970</real>
 			<key>ypos</key>
 			<real>365</real>
 		</dict>
 		<key>6307D69B-2A58-4CC8-A224-EECFB208F0B8</key>
 		<dict>
 			<key>xpos</key>
-			<real>810</real>
+			<real>875</real>
 			<key>ypos</key>
 			<real>490</real>
 		</dict>
 		<key>69E2339E-FD01-4F41-91B5-99F8BA6C439F</key>
 		<dict>
 			<key>xpos</key>
-			<real>1195</real>
+			<real>1260</real>
 			<key>ypos</key>
 			<real>190</real>
 		</dict>
@@ -1414,14 +1434,14 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>6F02DF87-5036-47FA-B960-C57F64C120DD</key>
 		<dict>
 			<key>xpos</key>
-			<real>860</real>
+			<real>925</real>
 			<key>ypos</key>
 			<real>440</real>
 		</dict>
 		<key>759121D9-E2D9-429D-A361-034E5C467193</key>
 		<dict>
 			<key>xpos</key>
-			<real>760</real>
+			<real>825</real>
 			<key>ypos</key>
 			<real>540</real>
 		</dict>
@@ -1435,7 +1455,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>8D3BABE5-6CDE-4E77-A161-CD8F3EBD3021</key>
 		<dict>
 			<key>xpos</key>
-			<real>620</real>
+			<real>685</real>
 			<key>ypos</key>
 			<real>70</real>
 		</dict>
@@ -1449,7 +1469,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>A5BBBDFA-812C-4890-A9FB-7A4C7412959F</key>
 		<dict>
 			<key>xpos</key>
-			<real>1410</real>
+			<real>1475</real>
 			<key>ypos</key>
 			<real>335</real>
 		</dict>
@@ -1460,26 +1480,28 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<key>ypos</key>
 			<real>640</real>
 		</dict>
+		<key>B9401232-A7CF-42BD-AC1E-5A9FEE54DD5C</key>
+		<dict>
+			<key>note</key>
+			<string>Search configuration</string>
+			<key>xpos</key>
+			<real>475</real>
+			<key>ypos</key>
+			<real>335</real>
+		</dict>
 		<key>BB2CD150-2E0C-44B4-AD25-3E38E4BF793B</key>
 		<dict>
 			<key>xpos</key>
-			<real>1080</real>
+			<real>1145</real>
 			<key>ypos</key>
 			<real>630</real>
 		</dict>
 		<key>BBDDB0D6-6A05-4706-8428-55AE093FA9E4</key>
 		<dict>
 			<key>xpos</key>
-			<real>1235</real>
+			<real>1300</real>
 			<key>ypos</key>
 			<real>510</real>
-		</dict>
-		<key>CD443C0A-C593-4AB8-B60F-BA7E78AE5C27</key>
-		<dict>
-			<key>xpos</key>
-			<real>485</real>
-			<key>ypos</key>
-			<real>365</real>
 		</dict>
 		<key>D004042C-58C6-4A14-9D27-EFE19796B8AF</key>
 		<dict>
@@ -1498,14 +1520,14 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 		<key>E9284C9B-2763-4D7F-A733-37D92B2DCECB</key>
 		<dict>
 			<key>xpos</key>
-			<real>1905</real>
+			<real>1970</real>
 			<key>ypos</key>
 			<real>220</real>
 		</dict>
 		<key>EDBCA616-E301-4D4A-9B81-6A94998D0A93</key>
 		<dict>
 			<key>xpos</key>
-			<real>925</real>
+			<real>990</real>
 			<key>ypos</key>
 			<real>630</real>
 		</dict>
@@ -1614,6 +1636,25 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 			<string>popupbutton</string>
 			<key>variable</key>
 			<string>new_file_extension</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Start search with an asterisk</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Search</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>search_with_asterisk</string>
 		</dict>
 		<dict>
 			<key>config</key>
