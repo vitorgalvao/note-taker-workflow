@@ -1491,7 +1491,7 @@ Notes previewed in Alfred are parsed as markdown. The view is stacked, meaning &
 				</array>
 			</dict>
 			<key>description</key>
-			<string>Searching against full words is faster but requires you to type words exactly. Both are case-insensitive.</string>
+			<string>Searching against full words is faster but requires you to type words exactly. Both are case and diacritic-insensitive.</string>
 			<key>label</key>
 			<string>Word Match</string>
 			<key>type</key>
