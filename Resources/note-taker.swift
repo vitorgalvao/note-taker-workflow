@@ -54,36 +54,31 @@ if let searchString = CommandLine.arguments.dropFirst().first {
   query.predicate = fileTypePredicate
 }
 
-// Run query
-query.enableUpdates()
-query.start()
-
-// On query end
-let notificationCenter = NotificationCenter.default
-let observer = notificationCenter.addObserver(forName: .NSMetadataQueryDidFinishGathering, object: query, queue: nil) { _ in
-  // Stop query
+let finishedNotification = NotificationCenter.default.addObserver(
+  forName: .NSMetadataQueryDidFinishGathering, object: query, queue: nil
+) { _ in
   query.stop()
-  notificationCenter.removeObserver(observer)
+  CFRunLoopStop(CFRunLoopGetCurrent())
+}
 
-  // Prepare results
-  let results = query.results as? [NSMetadataItem] ?? []
+// Run query
+query.start()
+CFRunLoopRun()
+NotificationCenter.default.removeObserver(finishedNotification)
 
-  let sfItems: [ScriptFilter.Item] = results.compactMap {
-    guard let resultPath = $0.value(forAttribute: NSMetadataItemPathKey) as? String else { return nil }
-    return ScriptFilter.Item(resultPath)
-  }
+// Parse results
+let results = query.results as? [NSMetadataItem] ?? []
 
-  // No results
-  guard !sfItems.isEmpty else {
-    print("{\"items\":[{\"title\":\"No Results\",\"valid\":false}]}")
-    exit(0)
-  }
-
-  // Output JSON
-  let jsonData = try! JSONEncoder().encode(["items": sfItems])
-  print(String(data: jsonData, encoding: .utf8)!)
-
+guard results.isEmpty else {
+  print("{\"items\":[{\"title\":\"No Results\",\"valid\":false}]}")
   exit(0)
 }
 
-RunLoop.main.run()
+let sfItems: [ScriptFilter.Item] = results.compactMap {
+  guard let resultPath = $0.value(forAttribute: NSMetadataItemPathKey) as? String else { return nil }
+  return ScriptFilter.Item(resultPath)
+}
+
+// Output JSON
+let jsonData = try! JSONEncoder().encode(["items": sfItems])
+print(String(data: jsonData, encoding: .utf8)!)

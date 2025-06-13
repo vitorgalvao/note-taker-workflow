@@ -473,21 +473,60 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsfiles</key>
-				<false/>
-				<key>acceptsmulti</key>
+				<key>behaviour</key>
+				<integer>2</integer>
+				<key>fontmode</key>
 				<integer>0</integer>
-				<key>acceptstext</key>
+				<key>fontsizing</key>
+				<integer>0</integer>
+				<key>footertext</key>
+				<string>⌘↩ Edit in Alfred · ⌥↩ Open in text editor</string>
+				<key>inputfile</key>
+				<string>{var:note_path}</string>
+				<key>inputtype</key>
+				<integer>2</integer>
+				<key>loadingtext</key>
+				<string></string>
+				<key>outputmode</key>
+				<integer>0</integer>
+				<key>scriptinput</key>
+				<integer>0</integer>
+				<key>spellchecking</key>
+				<integer>0</integer>
+				<key>stackview</key>
 				<true/>
-				<key>acceptsurls</key>
-				<true/>
-				<key>name</key>
-				<string>Add note</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.universalaction</string>
+			<string>alfred.workflow.userinterface.text</string>
 			<key>uid</key>
-			<string>D004042C-58C6-4A14-9D27-EFE19796B8AF</string>
+			<string>69E2339E-FD01-4F41-91B5-99F8BA6C439F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>adduuid</key>
+				<false/>
+				<key>allowemptyfiles</key>
+				<true/>
+				<key>createintermediatefolders</key>
+				<false/>
+				<key>filename</key>
+				<string>{query}</string>
+				<key>filetext</key>
+				<string>{var:action_text}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>relativepathmode</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.writefile</string>
+			<key>uid</key>
+			<string>4268F5BF-DEAF-4330-9243-96D731A79649</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -570,60 +609,29 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>behaviour</key>
-				<integer>2</integer>
-				<key>fontmode</key>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
 				<integer>0</integer>
-				<key>fontsizing</key>
-				<integer>0</integer>
-				<key>footertext</key>
-				<string>⌘↩ Edit in Alfred · ⌥↩ Open in text editor</string>
-				<key>inputfile</key>
-				<string>{var:note_path}</string>
-				<key>inputtype</key>
-				<integer>2</integer>
-				<key>loadingtext</key>
-				<string></string>
-				<key>outputmode</key>
-				<integer>0</integer>
-				<key>scriptinput</key>
-				<integer>0</integer>
-				<key>spellchecking</key>
-				<integer>0</integer>
-				<key>stackview</key>
+				<key>acceptstext</key>
 				<true/>
+				<key>acceptsurls</key>
+				<true/>
+				<key>name</key>
+				<string>Add note</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.userinterface.text</string>
+			<string>alfred.workflow.trigger.universalaction</string>
 			<key>uid</key>
-			<string>69E2339E-FD01-4F41-91B5-99F8BA6C439F</string>
+			<string>D004042C-58C6-4A14-9D27-EFE19796B8AF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>adduuid</key>
-				<false/>
-				<key>allowemptyfiles</key>
-				<true/>
-				<key>createintermediatefolders</key>
-				<false/>
-				<key>filename</key>
-				<string>{query}</string>
-				<key>filetext</key>
-				<string>{var:action_text}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
-				<integer>0</integer>
-				<key>type</key>
-				<integer>1</integer>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
+			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>4268F5BF-DEAF-4330-9243-96D731A79649</string>
+			<string>E9284C9B-2763-4D7F-A733-37D92B2DCECB</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -648,27 +656,53 @@ function run(argv) {
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>E9284C9B-2763-4D7F-A733-37D92B2DCECB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
+				<key>alfredfiltersresults</key>
 				<false/>
-				<key>triggerid</key>
-				<string>new_from_action</string>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>{var:view_notes_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Finding notes…</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>note-taker</string>
+				<key>subtext</key>
+				<string>↩ Edit · ⌘↩ Preview · ⌥↩ Copy · ⌃↩ Copy and delete · ⇧ Quick Look</string>
+				<key>title</key>
+				<string>View Notes</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>333830F7-22A8-49D1-9288-2AF6CEF19CBF</string>
+			<string>3864AD6B-0938-430D-994D-44986E64781E</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -733,51 +767,17 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>availableviaurlhandler</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>{var:view_notes_keyword}</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Finding notes…</string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>note-taker</string>
-				<key>subtext</key>
-				<string>↩ Edit · ⌘↩ Preview · ⌥↩ Copy · ⌃↩ Copy and delete · ⇧ Quick Look</string>
-				<key>title</key>
-				<string>View Notes</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
+				<key>triggerid</key>
+				<string>new_from_action</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>3864AD6B-0938-430D-994D-44986E64781E</string>
+			<string>333830F7-22A8-49D1-9288-2AF6CEF19CBF</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -828,32 +828,17 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:open_in_editor}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>5</integer>
-						<key>matchstring</key>
-						<string></string>
-						<key>outputlabel</key>
-						<string>Open in Editor</string>
-						<key>uid</key>
-						<string>8EB01AF1-E5E2-487A-8A45-0087A01F883E</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string></string>
-				<key>hideelse</key>
-				<true/>
+				<key>argument</key>
+				<string>{var:note_path}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>5B01A01B-A7DE-4D47-9336-B7CA9E99C023</string>
+			<string>5E8ED3D2-1843-4703-8D38-06A64073881B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -880,17 +865,32 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{var:note_path}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:open_in_editor}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>5</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>Open in Editor</string>
+						<key>uid</key>
+						<string>8EB01AF1-E5E2-487A-8A45-0087A01F883E</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string></string>
+				<key>hideelse</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>5E8ED3D2-1843-4703-8D38-06A64073881B</string>
+			<string>5B01A01B-A7DE-4D47-9336-B7CA9E99C023</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1042,25 +1042,6 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>FEC3EEA9-5B06-4A4A-99CB-12577C0176B6</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>behaviour</key>
 				<integer>1</integer>
 				<key>fontmode</key>
@@ -1111,6 +1092,25 @@ function run(argv) {
 			<string>6EE6822B-BEF6-4448-AC29-1AF65040217F</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>FEC3EEA9-5B06-4A4A-99CB-12577C0176B6</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
