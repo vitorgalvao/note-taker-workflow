@@ -60,7 +60,7 @@ query.start()
 
 // On query end
 let notificationCenter = NotificationCenter.default
-let observer = notificationCenter.addObserver(forName: NSNotification.Name.NSMetadataQueryDidFinishGathering, object: query, queue: nil) { _ in
+let observer = notificationCenter.addObserver(forName: .NSMetadataQueryDidFinishGathering, object: query, queue: nil) { _ in
   // Stop query
   query.stop()
   notificationCenter.removeObserver(observer)
